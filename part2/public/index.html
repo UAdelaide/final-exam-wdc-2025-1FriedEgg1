@@ -87,7 +87,7 @@
         alert("Login failed: " + data.error);
         return;
       }
-      if(res.user.)
+      if(res.user.role === "walker") window.location = "owner-dashboard.html"
       console.log("Login Success.");
     });
 
