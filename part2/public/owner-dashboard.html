@@ -146,6 +146,7 @@
         async function getDogs() {
           try {
             const res = await fetch("/users/getDogs");
+            if(!res)
             const data = await res.json();
             dogs.push(data);
           } catch (err) {
