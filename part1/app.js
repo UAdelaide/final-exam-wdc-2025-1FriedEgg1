@@ -66,8 +66,10 @@ INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, st
 `);
     await db.execute(`
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) SELECT dog_id, '2025-06-12 07:35:00', 90, "Hospital", "cancelled" FROM Dogs WHERE name="Dog2";
+`);
+    await db.execute(`
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) SELECT dog_id, '2025-06-14 11:30:00', 55, "Langles House", "accepted" FROM Dogs WHERE name="Dog3";
-
+`);
   } catch (err) {
     console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
   }
