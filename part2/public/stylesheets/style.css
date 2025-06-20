@@ -158,7 +158,7 @@ section {
 }
 
 /* Login Stuff Edits*/
-#login-btn {
+.auth-container button {
     color: black;
     background-color: blue;
 }
