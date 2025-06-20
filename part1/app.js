@@ -79,7 +79,12 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/api', apiRouter);
 
-app.get('/api/d')
+app.get('/api/dogs', async (req, res) => {
+  router.get('/dogs', async function (req, res, next) {
+    const [rows] = await db.query('SELECT d.name, d.size, u.username FROM Dogs d JOIN Users u ON d.owner_id = u.user_id;');
+    return res.json(rows);
+  });
+})
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
