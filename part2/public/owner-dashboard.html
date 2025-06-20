@@ -87,7 +87,7 @@
       console.log("yay");
       fetch('api/logout', {
         method: 'POST'
-      })
+      }).then(() => window.location = "index.html");
     })
   </script>
 
