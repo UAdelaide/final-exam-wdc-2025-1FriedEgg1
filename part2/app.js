@@ -27,5 +27,15 @@ const userRoutes = require('./routes/userRoutes');
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
+app.get('/api/dogs', async (req, res) => {
+    try {
+        const [rows] = await db.query('SELECT d.name AS dog_name, d.size, u.username AS owner_username FROM Dogs d JOIN Users u ON d.owner_id = u.user_id;');
+        return res.json(rows);
+    } catch (err) {
+        console.error(err);
+    }
+}
+);
+
 // Export the app instead of listening here
 module.exports = app;
