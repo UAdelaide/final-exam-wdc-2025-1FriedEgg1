@@ -98,7 +98,7 @@ app.get('/api/walkrequests/open', async (req, res) => {
 
 app.get('api/walkers/summary', async (req, res) => {
   try {
-    const [rows] = await db.query('SELECT u.username AS walker_username,  ');
+    const [rows] = await db.query('SELECT u.username AS walker_username, COUNT(wr.request_id) AS completed_walks ');
     return res.json(rows);
   } catch (err) {
     console.log(err);
