@@ -83,7 +83,9 @@
 
 
 <script>
-  document.getElementById("logout").addEventListener("click")
+  document.getElementById("logout").addEventListener("click", async () => {
+    fetch('/logout')
+  })
 </script>
 
   <script>
