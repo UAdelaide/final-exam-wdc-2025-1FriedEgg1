@@ -77,7 +77,9 @@
       const username = document.getElementById("login-form").querySelector('input[name="username"]').value;
       const password = document.getElementById("login-form").querySelector('input[name="password"]').value;
 
-      const res = await fetch('/api/users/login')
+      const res = await fetch('/api/users/login', {
+        method: 'POST'
+      })
     })
   </script>
 </body>
