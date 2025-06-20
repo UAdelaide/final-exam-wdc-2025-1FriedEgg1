@@ -23,8 +23,9 @@
         },
         methods: {
             async fetchDog() {
-                let data = await fetch('https://dog.ceo/api/breeds/image/random')length
-                
+                let data = await fetch('https://dog.ceo/api/breeds/image/random');
+                let response = data.json();
+                this.img =
             }
         }
     })
