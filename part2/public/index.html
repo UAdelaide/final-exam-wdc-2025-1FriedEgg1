@@ -84,7 +84,7 @@
 
       const data = await res.json();
       if (!data.ok) return alert("Something went wrong.");
-      if (res.user.role == "walker") window.location = "walker-dashboard.html";
+      if (res.user.role === "walker") window.location = "walker-dashboard.html";
       window.location = "owner-dashboard.html"
     });
 
