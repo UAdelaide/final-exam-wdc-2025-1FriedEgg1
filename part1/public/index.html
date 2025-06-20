@@ -3,19 +3,21 @@
 <style></style>
 
 <body>
-<h1>Dog of the day!</h1>
-<h2>Dog name: Mr snowball</h2>
+    <h1>Dog of the day!</h1>
+    <h2>Dog name: Mr snowball</h2>
+    <img src="img"
 
 </body>
 <script>
-const {createApp} = Vue;
-createApp({
-    data() {
-        return {
-            img:  async() => await fetch('https://dog.ceo/api/breeds/image/random').json().message
+    const { createApp } = Vue;
+    createApp({
+        data() {
+            return {
+                img: async () => await fetch('https://dog.ceo/api/breeds/image/random').json().message
+            }
         }
-    }
-})
+    })
 
 </script>
+
 </html>
