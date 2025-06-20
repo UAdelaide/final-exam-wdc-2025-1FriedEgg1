@@ -31,6 +31,7 @@ app.use('/api/users', userRoutes);
 app.get('/api/dogs', async (req, res) => {
     try {
         const [rows] = await db.query('SELECT * FROM Dogs;');
+        console.log(JSON.stringify(rows));
         return res.json(rows);
     } catch (err) {
         console.error(err);
