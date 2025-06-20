@@ -154,7 +154,7 @@
   <script>
     document.getElementById("/users/logout").addEventListener("click", async () => {
       console.log("yay");
-      fetch('api/logout', {
+      fetch('api/users/logout', {
         method: 'POST'
       }).then(() => window.location = "index.html");
     })
