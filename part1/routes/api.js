@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/dogs', function(req, res, next) {
-  const 
+  const [rows] = await
 });
 
 module.exports = router;
