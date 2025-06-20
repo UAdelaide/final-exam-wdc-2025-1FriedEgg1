@@ -161,6 +161,6 @@ section {
 .auth-container button {
     color: black;
     padding: 10px;
+    border-radius: 4px;
     cursor: pointer;
-    background-color: blue;
 }
