@@ -158,7 +158,7 @@ section {
 }
 
 /* Login Stuff Edits*/
-.auth-container button {
+.auth-container button[type="submit"] {
     color: black;
     background-color: blue;
     padding: 10px;
