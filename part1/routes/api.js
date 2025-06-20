@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const db = require("../db.js");
+const db = require("../app")
 
 
 router.get('/dogs', async function (req, res, next) {
