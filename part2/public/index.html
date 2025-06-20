@@ -103,12 +103,9 @@
           const dogReq = await fetch('/api/dogs');
           const dogRes = await dogReq.json();
           console.log(dogRes);
-          // Fetch photo
-          const apiReq = await fetch("https://dog.ceo/api/breeds/image/random");
-          const apiRes = await apiReq.json();
           // Append photo and push to array
           dogRes.forEach(dog => {
-            dog.photo = apiRes.message;
+            dog.photo = fetchPhoto();
           });
           this.doglist = dogRes;
 
