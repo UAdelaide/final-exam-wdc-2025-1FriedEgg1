@@ -100,9 +100,9 @@
           const apiRes = await apiReq.json();
           // Append photo and push to array
           dogRes.array.forEach(dog => {
-            dog.photo = api
-
+            dog.photo = apiRes.message;
           });
+          this.doglist = dog
 
         }
       }
