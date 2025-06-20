@@ -76,6 +76,7 @@
             // Get requestId from API call
             const request = await fetch('/api/users/me');
             const requestHandle = await request.json();
+            let requestID = 
             const res = await fetch(`/api/walks/${requestId}/apply`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
