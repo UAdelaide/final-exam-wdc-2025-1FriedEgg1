@@ -15,6 +15,14 @@ let db;
             database: 'DogWalkService'
         });
 
+        db.connect((err) => {
+            if (err) {
+                console.error("Failed to connect to MySQL:", err);
+            } else {
+                console.log("Connected to MySQL");
+            }
+        });
+
         // Insert data if table is empty
         await db.execute(`
 INSERT INTO Users (username, email, password_hash, role) VALUES ("alice123", "alice@example.com", "hashed123", "owner"), ("bobwalker", "bob@example.com", "hashed456", "walker"), ("carol123", "carol@example.com", "hashed789", "owner"), ("mrsteve", "steve@example.com", "steve123", "walker"), ("steve2", "steve2@example.com", "password", "owner");
