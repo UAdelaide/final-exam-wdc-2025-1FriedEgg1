@@ -1,9 +1,9 @@
 const express = require('express');
 const path = require('path');
 require('dotenv').config();
-
+const session = require('express-session');
 const app = express();
- session({
+session({
     secret: process.env.session_secret || "default",
     resave: true, // Do not resave session if not modified
     saveUninitialized: false, // Do not store uninitialised sessions
