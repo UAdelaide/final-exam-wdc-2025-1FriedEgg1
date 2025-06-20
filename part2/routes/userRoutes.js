@@ -70,7 +70,7 @@ router.post('/logout', async (req, res) => {
 router.post('/getDogs', async (req, res) => {
   if (!req.session.user) return res.status(401).json({ msg: "User not logged in." });
   const owner_id = req.session.user.user_id;
-  const [result] = await db.query("SELECT * FROM Dogs WHERE ")
+  const [result] = await db.query("SELECT * FROM Dogs WHERE owner_id = ?", [])
 });
 
 module.exports = router;
