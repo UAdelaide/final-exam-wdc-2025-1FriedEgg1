@@ -60,7 +60,11 @@ INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, st
 `);
     await db.execute(`
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) SELECT dog_id, '2025-06-10 09:30:00', 45, "Beachside Ave", "accepted" FROM Dogs WHERE name="Bella";
+`);
+    await db.execute(`
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) SELECT dog_id, '2025-06-11 09:30:00', 10, "Roadside Ave", "accepted" FROM Dogs WHERE name="Dog1";
+`);
+    await db.execute(`
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) SELECT dog_id, '2025-06-12 07:35:00', 90, "Hospital", "cancelled" FROM Dogs WHERE name="Dog2";
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) SELECT dog_id, '2025-06-14 11:30:00', 55, "Langles House", "accepted" FROM Dogs WHERE name="Dog3";
 
