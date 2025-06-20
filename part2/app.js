@@ -3,7 +3,7 @@ const path = require('path');
 require('dotenv').config();
 const session = require('express-session');
 const app = express();
-session({
+app.use(session({
     secret: process.env.session_secret || "default",
     resave: true, // Do not resave session if not modified
     saveUninitialized: false, // Do not store uninitialised sessions
@@ -14,7 +14,7 @@ session({
         sameSite: 'Strict', // Prevent CSRF attacks
         secure: false
     }
-});
+}));
 
 // Middleware
 app.use(express.json());
