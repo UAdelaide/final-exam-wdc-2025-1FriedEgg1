@@ -87,12 +87,14 @@
 
       const data = await res.json();
       console.log(data); // For debugging
-      
+
+      // Handle errors
       if (res.error) {
         alert("Login failed: " + data.error);
         return;
       }
 
+      // Redirect Accordingly
       if (data.user.role === "walker") window.location = "walker-dashboard.html";
       if (data.user.role === "owner") window.location = "owner-dashboard.html";
       console.log("Login Success.");
