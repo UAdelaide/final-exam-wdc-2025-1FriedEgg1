@@ -88,7 +88,7 @@
       const data = await res.json();
       console.log(data); // For debugging
 
-      if(!data )
+      if (!data) return alert("Invalid Login")
 
       // Handle errors
       if (res.error) {
