@@ -3,7 +3,7 @@ const path = require('path');
 require('dotenv').config();
 const session = require('express-session');
 const app = express();
-const db = require("./models/db")
+const db = require("./models/db");
 app.use(session({
     secret: process.env.session_secret || "default",
     resave: true, // Do not resave session if not modified
