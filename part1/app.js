@@ -98,7 +98,7 @@ app.get('/api/walkrequests/open', async (req, res) => {
 
 app.get('api/walkers/summary', async (req, res) => {
   try {
-    const [rows] = await db.query('SELECT u.username, ');
+    const [rows] = await db.query('SELECT u.username AS walker_username,  ');
     return res.json(rows);
   } catch (err) {
     console.log(err);
