@@ -93,7 +93,9 @@
       methods: {
         async getDogList() {
           // Get Dog List
-          const dogReq = await fetch('/api/dogs')
+          const dogReq = await fetch('/api/dogs');
+          const dogRes = await dogReq.json();
+          
         }
       }
     }).mount('#app');
