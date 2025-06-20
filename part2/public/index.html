@@ -99,8 +99,9 @@
           const apiReq = await fetch("https://dog.ceo/api/breeds/image/random");
           const apiRes = await apiReq.json();
           // Append photo and push to array
-          dogRes.photo = apiRes.message;
-          form.value.doglist = dogRes;
+          dogRes.array.forEach(element => {
+            
+          });
 
         }
       }
