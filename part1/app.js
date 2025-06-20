@@ -51,9 +51,14 @@ INSERT INTO Dogs (name, size, owner_id) SELECT "Dog1", "large", user_id FROM Use
 `);
     await db.execute(`
 INSERT INTO Dogs (name, size, owner_id) SELECT "Dog2", "medium", user_id FROM Users WHERE username = 'alice123';
-
+`);
+    await db.execute(`
 INSERT INTO Dogs (name, size, owner_id) SELECT "Dog3", "small", user_id FROM Users WHERE username = 'steve2';
+`);
+    await db.execute(`
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) SELECT dog_id, '2025-06-10 08:00:00', 30, "Parklands", "open" FROM Dogs WHERE name="Max";
+`);
+    await db.execute(`
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) SELECT dog_id, '2025-06-10 09:30:00', 45, "Beachside Ave", "accepted" FROM Dogs WHERE name="Bella";
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) SELECT dog_id, '2025-06-11 09:30:00', 10, "Roadside Ave", "accepted" FROM Dogs WHERE name="Dog1";
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) SELECT dog_id, '2025-06-12 07:35:00', 90, "Hospital", "cancelled" FROM Dogs WHERE name="Dog2";
