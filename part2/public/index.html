@@ -83,7 +83,10 @@
       })
 
       const data = await res.json();
-      if (!data.ok) return alert("Something went wrong.");
+      if (data.error) {
+        alert("Login failed: " + data.error);
+        return;
+      }
       if (res.user.role === "walker") window.location = "walker-dashboard.html";
       window.location = "owner-dashboard.html"
     });
