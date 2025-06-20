@@ -5,7 +5,7 @@ const db = require("../db.js");
 
 /* GET users listing. */
 router.get('/dogs', async function (req, res, next) {
-    const [rows] = await db.execute('SELECT username, size, owner FROM Dogs JOIN Users ON Dogs.owner_id = Users.user_id')
+    const [rows] = await db.execute('SELECT username, size, owner FROM Dogs d JOIN Users u ON d.owner_id = u.user_id')
 });
 
 module.exports = router;
