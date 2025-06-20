@@ -148,7 +148,7 @@
             const res = await fetch("/api/users/getDogs");
             if (res.error) return alert("You are not logged in.");
             const data = await res.json();
-            form.value.dogs = data;
+            dogs.push(data);
           } catch (err) {
             console.error(err);
           }
