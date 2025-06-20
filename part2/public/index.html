@@ -82,6 +82,7 @@
       })
 
       const data = await res.json();
+      if(!r)
       if (res.user.role == "walker") window.location = "walker-dashboard.html";
       window.location = "owner-dashboard.html"
     });
