@@ -81,7 +81,8 @@
         body: JSON.stringify({"username": username, "password": password})
       })
 
-      const data = await res.
+      const data = await res.json();
+      if(res.walker) 
     });
 
   </script>
