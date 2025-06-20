@@ -18,7 +18,12 @@
                 img: ''
             };
         },
-        async mounted()
+        async mounted() {
+            this.fetchDog();
+        },
+        methods: {
+            fetchDog
+        }
     })
 
 </script>
