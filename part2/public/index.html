@@ -87,9 +87,9 @@
         alert("Login failed: " + data.error);
         return;
       }
-      
-      if (res.user.role === "walker") window.location = "walker-dashboard.html";
-      if (res.user.role === "owner") window.location = "owner-dashboard.html";
+
+      if (data.user.role === "walker") window.location = "walker-dashboard.html";
+      if (data.user.role === "owner") window.location = "owner-dashboard.html";
       console.log("Login Success.");
     });
 
