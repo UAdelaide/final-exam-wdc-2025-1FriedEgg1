@@ -98,7 +98,7 @@ app.get('/api/walkrequests/open', async (req, res) => {
 
 app.get('api/walkers/summary', async (req, res) => {
   try {
-    const [rows] = await db.query('SELECT u.username AS walker_username, COUNT(wr.request_id) AS completed_walks, AVG(wr.rating) AS average_rating, COUNT(wr.rating) AS total_ratings FROM WalkRatings wr JOIN Users u on');
+    const [rows] = await db.query('SELECT u.username AS walker_username, COUNT(wr.request_id) AS completed_walks, AVG(wr.rating) AS average_rating, COUNT(wr.rating) AS total_ratings FROM WalkRatings wr JOIN Users u ON wr.walker_id = u.user_id ');
     return res.json(rows);
   } catch (err) {
     console.log(err);
