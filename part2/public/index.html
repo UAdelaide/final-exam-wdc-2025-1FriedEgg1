@@ -78,7 +78,8 @@
       const password = document.getElementById("login-form").querySelector('input[name="password"]').value;
 
       const res = await fetch('/api/users/login', {
-        method: 'POST'
+        method: 'POST',
+        headers: {'Content-Type'}
       })
     })
   </script>
