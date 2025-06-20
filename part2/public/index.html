@@ -56,27 +56,26 @@
     <!-- END OF LOGIN PAGE -->
 
     <h1 style="color: black;">All Registered Dogs</h1>
-    <template>
-      <v-table>
-        <thead>
-          <tr>Dog ID</tr>
-          <tr>Name</tr>
-          <tr>Size</tr>
-          <tr>Owner ID</tr>
-          <tr>Photo</tr>
-        </thead>
-        <tbody>
-          <tr v-for="dog in doglist" :key="dog.dog_id">
-            <td>{{ dog.dog_id }}</td>
-            <td>{{ dog.name }}</td>
-            <td>{{ dog.size }}</td>
-            <td>{{ dog.owner_id }}</td>
-            <td>
-              <img :src="dog.photo" alt="doggo">
-            </td>
-          </tr>
-        </tbody>
-
+    <table>
+      <thead>
+        <tr>Dog ID</tr>
+        <tr>Name</tr>
+        <tr>Size</tr>
+        <tr>Owner ID</tr>
+        <tr>Photo</tr>
+      </thead>
+      <tbody>
+        <tr v-for="dog in doglist" :key="dog.dog_id">
+          <td>{{ dog.dog_id }}</td>
+          <td>{{ dog.name }}</td>
+          <td>{{ dog.size }}</td>
+          <td>{{ dog.owner_id }}</td>
+          <td>
+            <img :src="dog.photo" alt="doggo">
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
   <script>
