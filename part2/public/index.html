@@ -96,7 +96,9 @@
           const dogReq = await fetch('/api/dogs');
           const dogRes = await dogReq.json();
           // Append photo
-          const apiReq = await fetch("https://dog.ceo/api/breeds/image/random")
+          const apiReq = await fetch("https://dog.ceo/api/breeds/image/random");
+          const apiRes = await apiReq.json();
+          
         }
       }
     }).mount('#app');
