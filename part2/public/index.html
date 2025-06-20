@@ -88,6 +88,8 @@
       const data = await res.json();
       console.log(data); // For debugging
 
+      if(data.em)
+
       // Handle errors
       if (res.error) {
         alert("Login failed: " + data.error);
