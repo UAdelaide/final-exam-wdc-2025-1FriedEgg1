@@ -166,9 +166,8 @@ section {
     cursor: pointer;
 }
 
-.auth-container input[type="text"],
 .auth-container input[type="password"],
-.auth-container input[type="email"] {
+.auth-container input[type="username"] {
     width: 100%;
     padding: 10px;
     margin-top: 8px;
