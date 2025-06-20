@@ -87,7 +87,13 @@ app.get('/api/dogs', async (req, res) => {
 }
 );
 
-app.get('/api/walkrequests/open')
+app.get('/api/walkrequests/open', async(req, res => {
+  try {
+
+  } catch (err) {
+    console.error(err);
+  }
+}));
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
