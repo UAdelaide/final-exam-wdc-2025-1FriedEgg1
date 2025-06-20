@@ -87,7 +87,10 @@
           doglist: []
         };
       },
-      async mounted()
+      async mounted() {
+        this.getDogList();
+      },
+      methods
     }).mount('#app');
   </script>
 
