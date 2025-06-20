@@ -66,13 +66,13 @@
           <tr>Photo</tr>
         </thead>
         <tbody>
-<tr v-for="dog in doglist" :key="dog.dog_id">
-  <td>{{ dog.dog_id }}</td>
-  <td>{{ dog.name }}</td>
-  <td>{{ dog.size }}</td>
-  <td>{{ dog.owner_id }}</td>
-  <td>{{ dog.photo }}</td>
-</tr>
+          <tr v-for="dog in doglist" :key="dog.dog_id">
+            <td>{{ dog.dog_id }}</td>
+            <td>{{ dog.name }}</td>
+            <td>{{ dog.size }}</td>
+            <td>{{ dog.owner_id }}</td>
+            <td>{{ dog.photo }}</td>
+          </tr>
         </tbody>
       </v-table>
     </template>
@@ -100,7 +100,7 @@
           const apiRes = await apiReq.json();
           // Append photo and push to array
           dogRes.photo = apiRes.message;
-          
+          form.value.doglist = dogRes;
 
         }
       }
