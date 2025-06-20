@@ -75,7 +75,7 @@
           // Get requestId from API call
           const req = await fetch('/api/users/me');
           const res = await req.json();
-          
+          return res.user_id;
 
         }
 
