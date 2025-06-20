@@ -1,3 +1,23 @@
+/* Login Stuff Edits*/
+.auth-container button {
+    color: black;
+    background-color: blue;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.auth-container input[type="password"],
+.auth-container input[type="username"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -155,24 +175,4 @@ textarea {
 
 section {
     display: none;
-}
-
-/* Login Stuff Edits*/
-.auth-container button {
-    color: black;
-    background-color: blue;
-    padding: 10px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.auth-container input[type="password"],
-.auth-container input[type="username"] {
-    width: 100%;
-    padding: 10px;
-    margin-top: 8px;
-    margin-bottom: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
 }
