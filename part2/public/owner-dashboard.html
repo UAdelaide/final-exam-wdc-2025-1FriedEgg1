@@ -144,6 +144,7 @@
         }
 
         async function getDogs() {
+          if()
           try {
             const res = await fetch("/api/users/getDogs");
             if (res.error) return alert("You are not logged in.");
