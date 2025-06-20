@@ -97,7 +97,7 @@
           const apiReq = await fetch("https://dog.ceo/api/breeds/image/random");
           const apiRes = await apiReq.json();
           return apiRes.message;
-        }
+        },
         async getDogList() {
           // Get Dog List
           const dogReq = await fetch('/api/dogs');
@@ -109,8 +109,8 @@
           });
           this.doglist = dogRes;
 
-        }
-      }
+        },
+      },
     }).mount('#app');
   </script>
 
