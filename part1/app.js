@@ -79,7 +79,7 @@ app.use('/users', usersRouter);
 
 app.get('/api/dogs', async (req, res) => {
   try {
-    const [rows] = await db.query('SELECT d.name, d.size, u.username FROM Dogs d JOIN Users u ON d.owner_id = u.user_id;');
+    const [rows] = await db.query('SELECT d.name ', d.size, u.username FROM Dogs d JOIN Users u ON d.owner_id = u.user_id;');
     return res.json(rows);
   } catch (err) {
     console.error(err);
