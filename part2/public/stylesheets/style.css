@@ -160,5 +160,6 @@ section {
 /* Login Stuff Edits*/
 .auth-container button {
     color: black;
+    cursor: pointer;
     background-color: blue;
 }
