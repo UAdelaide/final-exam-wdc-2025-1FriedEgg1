@@ -89,7 +89,7 @@ app.get('/api/dogs', async (req, res) => {
 
 app.get('/api/walkrequests/open', async(req, res => {
   try {
-    const [rows] = await db.query('SELECT wr.request_id, d.name, wr.requested_time, wr.duration_minutes, wr.location, u.username FROM WalkRequests wr JOIN Dogs d ON wr.dog_id = d.dog_id JOIN Users u ON d.owner_id = u.user_id;');
+    const [rows] = await db.query('SELECT wr.request_id, d.name AS dog_name, wr.requested_time, wr.duration_minutes, wr.location, u.username FROM WalkRequests wr JOIN Dogs d ON wr.dog_id = d.dog_id JOIN Users u ON d.owner_id = u.user_id;');
     return res.json(rows);
   } catch (err) {
     console.error(err);
