@@ -77,7 +77,6 @@ INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, st
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/api', apiRouter);
 
 app.get('/api/dogs', async (req, res) => {
   try {
