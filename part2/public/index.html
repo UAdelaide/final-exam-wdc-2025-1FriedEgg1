@@ -104,8 +104,8 @@
           const dogRes = await dogReq.json();
           console.log(dogRes);
           // Append photo and push to array
-          dogRes.forEach(dog => {
-            dog.photo = fetchPhoto();
+          dogRes.forEach(async dog => {
+            dog.photo = await this.fetchPhoto();
           });
           this.doglist = dogRes;
 
