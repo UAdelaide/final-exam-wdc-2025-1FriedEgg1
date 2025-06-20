@@ -72,7 +72,9 @@
   <script>
     // Login stuff
     document.getElementById("login-btn").addEventListener("click", async () => {
-      console.log("Clicked.");
+      console.log("Clicked."); // For debugging
+
+      // Get input from forms
       const username = document.getElementById("login-form").querySelector('input[name="username"]').value;
       const password = document.getElementById("login-form").querySelector('input[name="password"]').value;
 
