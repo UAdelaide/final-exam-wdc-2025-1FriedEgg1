@@ -22,7 +22,9 @@
             this.fetchDog();
         },
         methods: {
-            fetchDog
+            async fetchDog() {
+                fetch('https://dog.ceo/api/breeds/image/random')
+            }
         }
     })
 
