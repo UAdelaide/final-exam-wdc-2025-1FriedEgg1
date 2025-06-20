@@ -83,7 +83,7 @@
       })
 
       const data = await res.json();
-      if (data.error) {
+      if (res.error) {
         alert("Login failed: " + data.error);
         return;
       }
