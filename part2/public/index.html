@@ -83,6 +83,10 @@
       })
 
       const data = await res.json();
+      if (res.error) {
+        alert("Login failed: " + data.error);
+        return;
+      }
       console.log("Login Success.");
     });
 
