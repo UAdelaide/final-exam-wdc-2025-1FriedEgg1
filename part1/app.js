@@ -89,8 +89,8 @@ app.get('/api/dogs', async (req, res) => {
 
 app.get('/api/walkrequests/open', async(req, res => {
   try {
-    const [rows] = await db.query();
-
+    const [rows] = await db.query('');
+    return res.json(rows);
   } catch (err) {
     console.error(err);
   }
