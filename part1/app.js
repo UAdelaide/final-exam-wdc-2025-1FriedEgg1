@@ -98,7 +98,8 @@ app.get('/api/walkrequests/open', async (req, res) => {
 
 app.get('api/walkers/summary', async (req, res) => {
   try {
-    
+    const [rows] = await db.query('');
+    return res.json(rows);
   } catch (err) {
     console.log(err);
   }
