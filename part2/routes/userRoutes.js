@@ -38,13 +38,13 @@ router.get('/me', (req, res) => {
 
 // POST login (dummy version)
 router.post('/login', async (req, res) => {
-  const { email, password } = req.body;
+  const { username, password } = req.body;
 
   try {
     const [rows] = await db.query(`
       SELECT user_id, username, role FROM Users
       WHERE username = ? AND password_hash = ?
-    `, [email, password]);
+    `, [username, password]);
     console.log('Entered password:', password);
     console.log('User from DB:', rows[0]);
     if (rows.length === 0) {
