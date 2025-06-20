@@ -3,6 +3,18 @@ const path = require('path');
 require('dotenv').config();
 
 const app = express();
+ session({
+    secret: process.env.session_secret || "default",
+    resave: true, // Do not resave session if not modified
+    saveUninitialized: false, // Do not store uninitialised sessions
+    rolling: true, // Refresh expiry on each request
+    cookie: {
+        httpOnly: true, // Prevent javascript access to cookie
+        maxAge: 3600000, // 1 hour expiration
+        sameSite: 'Strict', // Prevent CSRF attacks
+        secure: false
+    }
+});
 
 // Middleware
 app.use(express.json());
