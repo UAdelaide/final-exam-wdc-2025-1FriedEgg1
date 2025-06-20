@@ -13,7 +13,17 @@
     <h1 class="mb-4 text-primary">{{ message }}</h1>
     <p class="lead">Connect with trusted walkers for your beloved dog!</p>
     <!-- BEGIN LOGIN PAGE -->
-     
+    <div class="auth-container">
+      <!-- Login Form -->
+      <div id="login-form">
+          <h2>Log In</h2>
+          <input type="text" name="email" placeholder="Email">
+          <input type="password" name="password" placeholder="Password">
+          <button id="login-btn">Log In</button>
+          <div class="toggle-link">
+              <p>Don't have an account? <a id="show-signup">Sign up</a></p>
+          </div>
+      </div>
 
     <a href="owner-dashboard.html" class="btn btn-outline-primary me-2">Owner Dashboard</a>
     <a href="walker-dashboard.html" class="btn btn-outline-success">Walker Dashboard</a>
