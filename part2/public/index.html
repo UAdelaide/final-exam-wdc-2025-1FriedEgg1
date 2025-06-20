@@ -95,10 +95,12 @@
           // Get Dog List
           const dogReq = await fetch('/api/dogs');
           const dogRes = await dogReq.json();
-          // Append photo
+          // Fetch photo
           const apiReq = await fetch("https://dog.ceo/api/breeds/image/random");
           const apiRes = await apiReq.json();
+          // Append photo and push to array
           
+
         }
       }
     }).mount('#app');
