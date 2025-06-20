@@ -147,7 +147,7 @@
           try {
             const res = await fetch("/users/getDogs");
             const data = await res.json();
-            dogs
+            dogs.push(data);
           } catch (err) {
             console.error(err);
           }
