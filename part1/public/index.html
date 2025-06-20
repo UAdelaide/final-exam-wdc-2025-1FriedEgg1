@@ -13,7 +13,7 @@
     createApp({
         data() {
             return {
-                img: async () => await fetch('https://dog.ceo/api/breeds/image/random').json().message
+                img: getImage()
             }
         }
     })
