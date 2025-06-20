@@ -95,6 +95,7 @@
           // Get Dog List
           const dogReq = await fetch('/api/dogs');
           const dogRes = await dogReq.json();
+          console.log(dogre)
           // Fetch photo
           const apiReq = await fetch("https://dog.ceo/api/breeds/image/random");
           const apiRes = await apiReq.json();
