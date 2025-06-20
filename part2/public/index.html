@@ -89,7 +89,7 @@
         return;
       }
 
-      if (data.role === "walker") window.location = "walker-dashboard.html";
+      if (data.user.role === "walker") window.location = "walker-dashboard.html";
       if (data.role === "owner") window.location = "owner-dashboard.html";
       console.log("Login Success.");
     });
