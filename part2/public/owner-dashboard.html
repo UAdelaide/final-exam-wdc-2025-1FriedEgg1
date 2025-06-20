@@ -82,14 +82,7 @@
 
 
 
-  <script>
-    document.getElementById("logout").addEventListener("click", async () => {
-      console.log("yay");
-      fetch('api/logout', {
-        method: 'POST'
-      }).then(() => window.location = "index.html");
-    })
-  </script>
+
 
   <script>
     const { createApp, ref, onMounted } = Vue;
@@ -158,6 +151,14 @@
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById("logout").addEventListener("click", async () => {
+      console.log("yay");
+      fetch('api/logout', {
+        method: 'POST'
+      }).then(() => window.location = "index.html");
+    })
+  </script>
 </body>
 
 </html>
